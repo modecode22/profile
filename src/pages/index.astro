@@ -1,11 +1,15 @@
 ---
 import Animation from '../components/Animation.astro';
+import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to my profile.">
-	<main>
+	<main class="w-full p-10 flex flex-col justify-center items-center">
 		<Animation/>
-		<h1>Hey ! I'm <span class="text-gradient font-extrabold text-5xl">Moncef</span></h1>
+		<Hero/>
 	</main>
 </Layout>
+
+
+

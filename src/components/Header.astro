@@ -2,11 +2,31 @@
 
 
 
----
-<header class="w-full bg-white/80 h-14 flex justify-between items-center px-10 shadow-sm">
-    <section>Logo</section>
-    <nav>
 
+---
+
+<script>
+const themeBtn = document.querySelector(".theme-toggle");
+const htmlClassList = document.documentElement.classList;
+themeBtn?.addEventListener("click", function () {
+  if (htmlClassList.contains("dark")) {
+    localStorage.setItem("theme", "light");
+    htmlClassList.remove("dark");
+  } else {
+    localStorage.setItem("theme", "dark");
+    htmlClassList.add("dark");
+  }
+});
+</script>
+
+
+<header class="z-10 backdrop-blur-sm  sticky top-0  w-full bg-white/20 dark:bg-slate-900/30 h-14 flex justify-between items-center px-10 shadow-sm">
+    <section class="font-extrabold text-cyan-600 dark:text-cyan-50  dark:hover:text-cyan-200 duration-100 cursor-pointer" >Logo</section>
+    <nav class="flex justify-center items-center gap-5">
+            <a class="font-extrabold text-cyan-600 dark:text-cyan-100 dark:hover:text-cyan-200 hover:text-cyan-700 duration-100 cursor-pointer" >About</a>
+            <a class="font-extrabold text-cyan-600 dark:text-cyan-100 dark:hover:text-cyan-200 hover:text-cyan-700 duration-100 cursor-pointer" >Blog</a>
+            <a class="font-extrabold text-cyan-600 dark:text-cyan-100 dark:hover:text-cyan-200 hover:text-cyan-700 duration-100 cursor-pointer" >Home</a>
+            <h2 class=" theme-toggle text-lg font-black  text-zinc-900 dark:text-white">dark</h2>
     </nav>
 </header>
 
