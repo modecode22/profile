@@ -1,13 +1,17 @@
 ---
 import Animation from '../components/Animation.astro';
+import Expr from '../components/Expr.astro';
 import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to my profile.">
-	<main class="w-full p-10 flex flex-col justify-center items-center">
+	<main class="w-full p-10 flex flex-col justify-center items-center px-10 md:px-28 lg:px-64">
 		<Animation/>
 		<Hero/>
+		<Expr/>
+		<Projects/>
 	</main>
 </Layout>
 
