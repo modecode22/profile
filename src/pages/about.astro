@@ -1,4 +1,6 @@
 ---
+import AboutMe from '../components/AboutMe.astro';
+import Animation from '../components/Animation.astro';
 import Layout from '../layouts/Layout.astro';
 
 
@@ -7,10 +9,10 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 
-<Layout title="Welcome to my profile.">
-	<header class="flex justify-center items-center px-10"></header>
-	<main>
-		<h1>Hey ! I'm <span class="text-gradient font-extrabold text-5xl">Moncef</span></h1>
+<Layout title="About me .">
+	<main class="w-full p-10 flex flex-col justify-center items-center px-10  lg:px-40">
+		<Animation/>
+		<AboutMe/>
 	</main>
 </Layout>
 
