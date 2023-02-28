@@ -4,14 +4,15 @@ module.exports = {
 
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
  theme: {
-  colors:{
-        w1:"#ECF2FF",
-    w2:"#E3DFFD",
-    w3:"#E5D1FA",
-    d1:"#1A1A2E",
-    d2:"#16213E",
-    d3:"#0F3460",
-    d4:"#E94560",
+  extend:{
+      colors:{
+    pr:"#f5f3f4",
+    pr1:"#6fffe9",
+    pr2:"#5bc0be",
+    pr3:"#3a506b",
+    pr4:"#1c2541",
+    pr5:"#0b132b",
+  }
   }
   },
 	plugins: [],
