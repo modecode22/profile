@@ -4,12 +4,56 @@
 
 ---
 <style>
+
+
+.alot{
+
+  animation: gg 0.5s infinite ;
+}
+
+@keyframes gg {
+  0%:{
+    transform: translateY(100px)
+  }
+  25%:{
+    transform: translateY(50px)
+  }
+  50%:{
+    transform: translateY(20px)
+  }
+  75%:{
+    transform: translateY(10px)
+  }
+  100%:{
+    transform: translateY(100px)
+  }
+}
+
+
+
 </style>
 
 
 
+<div id="back" class=" w-full h-full flex justify-center items-center  rounded-full">
 
 
-<div class="w-full h-96 bg-pr1/30 rounded-lg shadow-lg shadow-pr1/20 ">
-  <div class="absolute bg-pr1 h-1 w-20 rounded-full "></div>
+
 </div>
+
+<script>
+const back = document.querySelector("#back");
+
+
+for (let i = 0; i < 500; i++) {
+  const a = document.createElement("div");
+  a.className = `-z-50 alot absolute w-1 h-1 rounded-full bg-pr1/10 right-[${Math.random()*100}px] bottom-[${Math.random()*100}px] `
+  a.style.width=`${Math.random()*100}px`
+  a.style.right = `${Math.random()*1800}px`
+   a.style.bottom = `${Math.random()*1800}px`
+  back?.appendChild(a)
+  console.log("rsdfg");
+}
+
+
+</script>
