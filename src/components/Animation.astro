@@ -4,56 +4,95 @@
 
 ---
 <style>
-
-
-.alot{
-
-  animation: gg 0.5s infinite ;
-}
-
-@keyframes gg {
-  0%:{
-    transform: translateY(100px)
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
   }
-  25%:{
-    transform: translateY(50px)
-  }
-  50%:{
-    transform: translateY(20px)
-  }
-  75%:{
-    transform: translateY(10px)
-  }
-  100%:{
-    transform: translateY(100px)
+  
+  to {
+    background-position: 0% -100%;
   }
 }
 
+.screen-overlay {    
+  background: linear-gradient(
+    #149cca3a,
+    #09f3d02d 1px,
+    transparent 1px,
+    transparent 1px
+  );
+  background-size: 50% 9px;
+  height: 100%;
+  width: 100%;
+  animation: pan-overlay 60s infinite linear;
+  position: absolute;
+  z-index: -5;
+  left: 0px;
+  top: 0px;
+}
 
+@keyframes pan-image {  
+  0% {
+    background-position: 50% 20%;
+    background-size: 200%;
+  }
+  
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+  
+  20.0001% { /* -- View 2 -- */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+  
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+  
+  40.0001% { /* -- View 3 -- */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+  
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+  
+  60.0001% { /* -- View 4 -- */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+  
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+  
+  80.0001% { /* -- View 5 -- */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+  
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
 
 </style>
 
 
-
-<div id="back" class=" w-full h-full flex justify-center items-center  rounded-full">
-<div></div>
-
-
-</div>
-
-<script>
-const back = document.querySelector("#back");
+  
+  <div class="screen-overlay"></div>  
 
 
-for (let i = 0; i < 500; i++) {
-  const a = document.createElement("div");
-  a.className = `-z-50 alot absolute w-1 h-1 rounded-full bg-pr1/10 right-[${Math.random()*100}px] bottom-[${Math.random()*100}px] `
-  a.style.width=`${Math.random()*100}px`
-  a.style.right = `${Math.random()*1800}px`
-   a.style.bottom = `${Math.random()*1800}px`
-  back?.appendChild(a)
-  console.log("rsdfg");
-}
 
 
-</script>
+  
+
+
+
