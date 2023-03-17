@@ -3,7 +3,42 @@ import Animation from "./Animation.astro";
 
 ---
 
-
+<style>
+    .random{
+        animation: random 20s infinite ;
+    }
+    @keyframes random {
+        0%{
+            filter: grayscale(0.1);
+        }
+           20%{
+            filter: grayscale(0.5);
+        }
+        30%{
+            filter: grayscale(1);
+        }
+        40%{
+            filter: grayscale(0.2);
+        }
+        50%{
+            filter: grayscale(0.6);
+        }
+        60%{
+            filter: grayscale(1);
+        }
+        70%{
+            filter: grayscale(0.3);
+        }80%{
+            filter: grayscale(0.5);
+        }
+        90%{
+            filter: grayscale(1);
+        }
+        100%{
+            filter: grayscale(0.1);
+        }
+    }
+</style>
 
 
 <div class="w-full flex flex-col justify-center items-center flex-wrap  gap-10 my-10">
@@ -11,12 +46,12 @@ import Animation from "./Animation.astro";
 <div class="w-full gap-5 grid grid-cols-1  md:grid-cols-2 ">
 
 
-    <article class="bg-pr3/30 dark:bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
+    <article class="bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
      		<Animation/>
 
-        <section class="bg-pr3/30 dark:bg-pr1/30 p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
-            <section class="  aspect-video rounded-lg w-full  overflow-hidden row-span-1">
-                    <img class="shadow-lg border border-pr/20 shadow-pr2/20 h-full w-full rounded-lg  hover:-translate-y-1 duration-300 hover:shadow-lg hover:shadow-pr2 cursor-pointer transition-all" src={"/pr1.webp"} alt="progect image 1 ">
+        <section class="bg-white/80 dark:bg-pr5/80  p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
+            <section class="  aspect-video rounded-lg w-full   row-span-1">
+                    <img class="shadow-lg   h-full w-full rounded-lg  hover:-translate-y-[0.1rem] grayscale-[0.5] hover:animate-none hover:brightness-110 active:brightness-125 random hover:grayscale-0 scr duration-75  hover:shadow-lg dark:hover:shadow-pr5 cursor-pointer transition-all ease-in hover:shadow-pr2" src={"/pr1.webp"} alt="progect image 1 ">
                     </section>
     <main>
     <h1 class="font-bold ">A site Name</h1>
@@ -24,23 +59,66 @@ import Animation from "./Animation.astro";
 </main>
 <section class="grid grid-cols-2">
     <div class="flex flex-wrap gap-1 md:text-xs">
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">Next js</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">TailwindCss</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">firebase</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">restApi</h3>   </div>
-    <div class="underline self-end justify-self-end  text-pr text-lg hover:text-pr1 dark:hover:text-pr dark:text-pr5 cursor-pointer">visit now</div>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">Next js</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">TailwindCss</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">firebase</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">restApi</h3>   </div>
+    <div class="hover:underline self-end justify-self-end   text-lg  hover:text-pr2 active:text-pr1 dark:active:text-pr1 duration-100 transition-all dark:hover:text-pr2 dark:text-pr text-pr5 cursor-pointer">visit now</div>
+</section>
+</section>   
+</article>
+
+    <article class="bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
+     		<Animation/>
+
+        <section class="bg-white/80 dark:bg-pr5/80  p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
+            <section class="  aspect-video rounded-lg w-full   row-span-1">
+                    <img class="shadow-lg   h-full w-full rounded-lg  hover:-translate-y-[0.1rem] grayscale-[0.5] hover:animate-none hover:brightness-110 active:brightness-125 random hover:grayscale-0 scr duration-75  hover:shadow-lg dark:hover:shadow-pr5 cursor-pointer transition-all ease-in hover:shadow-pr2" src={"/pr1.webp"} alt="progect image 1 ">
+                    </section>
+    <main>
+    <h1 class="font-bold ">A site Name</h1>
+    <h3>the site description ...</h3>
+</main>
+<section class="grid grid-cols-2">
+    <div class="flex flex-wrap gap-1 md:text-xs">
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">Next js</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">TailwindCss</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">firebase</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">restApi</h3>   </div>
+    <div class="hover:underline self-end justify-self-end   text-lg  hover:text-pr2 active:text-pr1 dark:active:text-pr1 duration-100 transition-all dark:hover:text-pr2 dark:text-pr text-pr5 cursor-pointer">visit now</div>
+</section>
+</section>   
+</article>
+
+    <article class="bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
+     		<Animation/>
+
+        <section class="bg-white/80 dark:bg-pr5/80  p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
+            <section class="  aspect-video rounded-lg w-full   row-span-1">
+                    <img class="shadow-lg   h-full w-full rounded-lg  hover:-translate-y-[0.1rem] grayscale-[0.5] hover:animate-none hover:brightness-110 active:brightness-125 random hover:grayscale-0 scr duration-75  hover:shadow-lg dark:hover:shadow-pr5 cursor-pointer transition-all ease-in hover:shadow-pr2" src={"/pr1.webp"} alt="progect image 1 ">
+                    </section>
+    <main>
+    <h1 class="font-bold ">A site Name</h1>
+    <h3>the site description ...</h3>
+</main>
+<section class="grid grid-cols-2">
+    <div class="flex flex-wrap gap-1 md:text-xs">
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">Next js</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">TailwindCss</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">firebase</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">restApi</h3>   </div>
+    <div class="hover:underline self-end justify-self-end   text-lg  hover:text-pr2 active:text-pr1 dark:active:text-pr1 duration-100 transition-all dark:hover:text-pr2 dark:text-pr text-pr5 cursor-pointer">visit now</div>
 </section>
 </section>   
 </article>
 
 
-
-    <article class="bg-pr3/30 dark:bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
+    <article class="bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
      		<Animation/>
 
-        <section class="bg-pr3/30 dark:bg-pr1/30 p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
-            <section class="  aspect-video rounded-lg w-full  overflow-hidden row-span-1">
-                    <img class="shadow-lg border border-pr/20 shadow-pr2/20 h-full w-full rounded-lg  hover:-translate-y-1 duration-300 hover:shadow-lg hover:shadow-pr2 cursor-pointer transition-all" src={"/pr1.webp"} alt="progect image 1 ">
+        <section class="bg-white/80 dark:bg-pr5/80  p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
+            <section class="  aspect-video rounded-lg w-full   row-span-1">
+                    <img class="shadow-lg   h-full w-full rounded-lg  hover:-translate-y-[0.1rem] grayscale-[0.5] hover:animate-none hover:brightness-110 active:brightness-125 random hover:grayscale-0 scr duration-75  hover:shadow-lg dark:hover:shadow-pr5 cursor-pointer transition-all ease-in hover:shadow-pr2" src={"/pr1.webp"} alt="progect image 1 ">
                     </section>
     <main>
     <h1 class="font-bold ">A site Name</h1>
@@ -48,55 +126,11 @@ import Animation from "./Animation.astro";
 </main>
 <section class="grid grid-cols-2">
     <div class="flex flex-wrap gap-1 md:text-xs">
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">Next js</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">TailwindCss</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">firebase</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">restApi</h3>   </div>
-    <div class="underline self-end justify-self-end  text-pr text-lg hover:text-pr1 dark:hover:text-pr dark:text-pr5 cursor-pointer">visit now</div>
-</section>
-</section>   
-</article>
-
-    <article class="bg-pr3/30 dark:bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
-     		<Animation/>
-
-        <section class="bg-pr3/30 dark:bg-pr1/30 p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
-            <section class="  aspect-video rounded-lg w-full  overflow-hidden row-span-1">
-                    <img class="shadow-lg border border-pr/20 shadow-pr2/20 h-full w-full rounded-lg  hover:-translate-y-1 duration-300 hover:shadow-lg hover:shadow-pr2 cursor-pointer transition-all" src={"/pr1.webp"} alt="progect image 1 ">
-                    </section>
-    <main>
-    <h1 class="font-bold ">A site Name</h1>
-    <h3>the site description ...</h3>
-</main>
-<section class="grid grid-cols-2">
-    <div class="flex flex-wrap gap-1 md:text-xs">
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">Next js</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">TailwindCss</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">firebase</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">restApi</h3>   </div>
-    <div class="underline self-end justify-self-end  text-pr text-lg hover:text-pr1 dark:hover:text-pr dark:text-pr5 cursor-pointer">visit now</div>
-</section>
-</section>   
-</article>
-
-    <article class="bg-pr3/30 dark:bg-pr1/30 group p-5 select-none  flex flex-col justify-center items-center text-sm   rounded-lg    backdrop-blur-md shadow-lg shadow-pr1/10 ">
-     		<Animation/>
-
-        <section class="bg-pr3/30 dark:bg-pr1/30 p-5 gap-5 w-full rounded-lg  shadow-lg shadow-pr2/20  row-span-1 flex flex-col justify-between">
-            <section class="  aspect-video rounded-lg w-full  overflow-hidden row-span-1">
-                    <img class="shadow-lg border border-pr/20 shadow-pr2/20 h-full w-full rounded-lg  hover:-translate-y-1 duration-300 hover:shadow-lg hover:shadow-pr2 cursor-pointer transition-all" src={"/pr1.webp"} alt="progect image 1 ">
-                    </section>
-    <main>
-    <h1 class="font-bold ">A site Name</h1>
-    <h3>the site description ...</h3>
-</main>
-<section class="grid grid-cols-2">
-    <div class="flex flex-wrap gap-1 md:text-xs">
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">Next js</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">TailwindCss</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">firebase</h3>
-        <h3 class="border px-1 rounded-full hover:bg-pr4/10 hover:border-pr3 flex justify-center items-center h-5">restApi</h3>   </div>
-    <div class="underline self-end justify-self-end  text-pr text-lg hover:text-pr1 dark:hover:text-pr dark:text-pr5 cursor-pointer">visit now</div>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">Next js</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">TailwindCss</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">firebase</h3>
+        <h3 class="border border-pr2/50 px-1 rounded-full hover:bg-pr2/10 hover:border-pr2 flex justify-center items-center h-5">restApi</h3>   </div>
+    <div class="hover:underline self-end justify-self-end   text-lg  hover:text-pr2 active:text-pr1 dark:active:text-pr1 duration-100 transition-all dark:hover:text-pr2 dark:text-pr text-pr5 cursor-pointer">visit now</div>
 </section>
 </section>   
 </article>
@@ -107,3 +141,4 @@ import Animation from "./Animation.astro";
 
 </div>
 </div>
+

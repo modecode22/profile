@@ -1,99 +1,34 @@
 ---
-import Animation from "./Animation.astro";
+import Me from "./Me.astro";
+import MeAnimation from "./MeAnimation.astro";
 
 ---
 
 
 
-<div class="relative w-full h-96 bg-pr1/30 rounded-lg shadow-lg shadow-pr1/20 p-5">
-     		
-<Animation/>
-<h1 class="line
-anim-typewriter">
+<div class="relative gap-5 grid grid-cols-2 w-full   rounded-lg  p-5">
+   	    <main class="bg-pr1/30 relative w-full aspect-square rounded-full  ">	
+<Me />
+     		<MeAnimation/>
+
+	</main> 		
+	<main>	
+<h1 class="text-animation drop-shadow-md text-3xl sm:text-4xl md:text-8xl ">
   Hey there!
 </h1>
-<h1 class="line
-anim-typewriter">
+<h1 class="text-animation drop-shadow-md  text-4xl sm:text-4xl md:text-8xl " >
   I'm Moncef
 </h1>
-<p class="line
-anim-typewriter ">
-  Welcome to my portfolio - the place where React and Next.js meet creativity and innovation. As a skilled developer, I'm passionate about crafting exceptional web applications that engage and excite users. Here you'll find examples of my work, my technical skills, and my unique approach to web development. So take a look around and let's create something amazing together!
-</p>
+
+<p class="text-animation drop-shadow-md text-sm sm:text-xl md:text-2xl ">
+  Welcome to my portfolio , the place where React and Next.js meet creativity and innovation.</p>	
+	</main> 		
+
 </div>
-<div></div>
 <style>
 
-@keyframes animate {
-	0%,
-	100% {
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-		);
-	}
-
-	50% {
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-		);
-	}
-}
 
 
-
-
-.line {
-      position: relative;
-      top: 50%;
-      width: 16em;
-      margin: 0 auto;
-      border-right: 2px solid rgba(255, 255, 255, 0.75);
-      font-size: 180%;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;transform: translateY(-50%);
-}
-
-/*Animation*/
-
-.anim-typewriter {
-      animation: typewriter 4s steps(40) 1s 1 normal both,
-      blinkTextCursor 500ms steps(40) infinite normal;
-}
-
-@keyframes typewriter {
-      from {
-            width: 0;
-      }
-      to {
-            width: 16em;
-      }
-}
-
-@keyframes blinkTextCursor {
-      from {
-            border-right-color: rgba(255, 255, 255, 0.75);
-      }
-      to {
-            border-right-color: transparent;
-      }
-}
 
 
 </style>

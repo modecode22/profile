@@ -3,15 +3,23 @@
 
 
 ---
-<style>
-@keyframes pan-overlay {
-  from {
-    background-position: 0% 0%;
-  }
+<style is:global>
+
+.text-animation {    
+    background: linear-gradient(
+        #149cca,
+        #09f3d0 10px,
+        transparent 10px,
+        transparent 10px
+        );
+            color: transparent;
+
+  background-size: 150% 9px;
+  height: fit-content;
+  animation: pan-overlay 60s infinite linear;
+  z-index: -5;
+  background-clip: text;
   
-  to {
-    background-position: 0% -100%;
-  }
 }
 
 .screen-overlay {    
@@ -31,6 +39,17 @@
   top: 0px;
 }
 
+
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+  
+  to {
+    background-position: 0% -100%;
+  }
+}
 @keyframes pan-image {  
   0% {
     background-position: 50% 20%;
@@ -84,7 +103,6 @@
 }
 
 </style>
-
 
   
   <div class="screen-overlay"></div>  
