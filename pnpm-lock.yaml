@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/tailwind': ^3.0.1
-  astro: ^2.0.9
-  tailwindcss: ^3.0.24
+  astro: ^2.0.15
+  tailwindcss: ^3.2.7
 
 dependencies:
   '@astrojs/tailwind': 3.0.1_enl5tymeuxlslzmmdrwlr7zkvy
